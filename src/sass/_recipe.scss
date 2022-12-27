@@ -1,0 +1,220 @@
+.recipe {
+  grid-area: recipe;
+  background-color: #eee;
+  position: relative;
+
+  &__fig {
+    height: 40rem;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%) skewy(-5deg);
+    width: 50%;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.9;
+    text-align: center;
+
+    span {
+      // background-image: linear-gradient(
+      //   to right,
+      //   $col-blue-light-1,
+      //   $col-blue-light-2
+      // );
+
+      background-color: #ddd;
+      padding: 1.3rem 3rem;
+      background-image: linear-gradient(to right, #eee, #ddd);
+    }
+  }
+
+  &__details {
+    height: 10rem;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    font-size: 1.8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 6rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    gap: 0.5rem;
+    align-items: center;
+    margin-right: 5rem;
+  }
+
+  &__ingridents {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      text-align: center;
+      margin: 3rem 0 1rem 0;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 6rem;
+      row-gap: 2.5rem;
+      padding: 2rem 3rem;
+      justify-items: start;
+
+      @media only screen and (max-width: $bp-medium-small) {
+        grid-template-columns: 100%;
+        justify-items: center;
+      }
+    }
+  }
+
+  &__direction {
+    background-color: #ddd;
+
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      text-align: center;
+      margin: 3rem 0 2rem 0;
+      text-transform: uppercase;
+      font-size: 2.2rem;
+    }
+
+    & p {
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    & .recipe__publisher {
+      font-weight: 600;
+    }
+
+    &-link {
+      margin: 2rem 0;
+      width: 15rem;
+      border: none;
+      background-color: #ffd43b;
+      cursor: pointer;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      transition: all 0.3s;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: #000;
+      gap: 0.5rem;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #fcc419;
+      }
+    }
+  }
+}
+
+.recipe__ingridient {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+
+  &-icon {
+    color: #aaa;
+  }
+}
+
+.message,
+.error {
+  max-width: 40rem;
+  font-size: 1.8rem;
+  padding: 4rem 5rem;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+.recipe__info-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.recipe__info-icons {
+  font-size: 2rem;
+}
+
+.btn-tiny {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 1.5rem;
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+.icon-servings {
+  font-size: 2rem;
+}
+
+.recipe__bookmarks {
+  margin-left: auto;
+}
+
+.btn__add-bookmark {
+  font-size: 3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bookmark-icon {
+  stroke: black;
+}

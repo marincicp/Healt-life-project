@@ -1,0 +1,245 @@
+.header {
+  grid-area: head;
+  background-color: $col-blue-light-3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium-small) {
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 1rem;
+  margin-left: -10rem;
+
+  @media only screen and (max-width: $bp-medium-small) {
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+}
+
+.search {
+  display: flex;
+  width: 30rem;
+  height: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 40rem;
+  }
+
+  @media only screen and (max-width: $bp-medium-small) {
+    margin-right: 2rem;
+    width: 30rem;
+    font-size: 1.2rem;
+  }
+
+  &__field {
+    width: 70%;
+    padding: 1rem 3rem;
+    border: none;
+    background-color: #eee;
+    font-family: "Barlow", sans-serif;
+
+    @media only screen and (max-width: $bp-medium-small) {
+      width: 55%;
+      font-size: inherit;
+    }
+  }
+
+  &__field:focus {
+    outline: none;
+  }
+  &__btn {
+    width: 30%;
+    border: none;
+    background-color: #ffd43b;
+    cursor: pointer;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    transition: all 0.3s;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium-small) {
+      font-size: inherit;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #fcc419;
+    }
+  }
+
+  &__btn:active {
+    font-size: 1.4rem;
+    transform: scale(1.1);
+  }
+}
+
+.bookmarks {
+  position: relative;
+  margin-right: -10rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-right: 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+
+.bookmarks__box {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  position: absolute;
+  width: 40rem;
+
+  right: -10%;
+  top: 3rem;
+  border-right: 2px solid #eee;
+  z-index: 10;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 35rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    right: -70%;
+  }
+
+  @media only screen and (max-width: $bp-medium-small) {
+    right: 0rem;
+    top: 5rem;
+    width: 30rem;
+  }
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.search-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.bookmarks__icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.bookmarks:hover,
+.bookmarks__btn:hover + .bookmarks__box {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preview__bookmarks {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &-fig {
+    flex: 0 0 5.8rem;
+    height: 5.8rem;
+    width: 5.8rem;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+      opacity: 0.3;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  &-link:link,
+  &-link:visited {
+    width: 100%;
+    padding: 1.5rem 3.25rem;
+    text-decoration: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: #0a0a0a;
+
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 0.5rem 1rem;
+    }
+
+    &:hover {
+      background-color: $col-blue-light-1;
+      transform: translateY(-1px);
+    }
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-publisher {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

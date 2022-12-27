@@ -1,0 +1,126 @@
+$col-blue-dark-2: #03045e;
+$col-blue-dark-1: #0077b6;
+$col-blue-light-3: #00b4d8;
+$col-blue-light-2: #90e0ef;
+$col-blue-light-1: #caf0f8;
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-medium-small: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  min-height: 117rem;
+
+  margin: 2vw auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-areas:
+    "head head"
+    "list recipe";
+
+  box-shadow: 0 0.5rem 2rem 0.2rem rgba(0, 0, 0, 0.2);
+
+  @media only screen and (max-width: $bp-large) {
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: $bp-medium-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem auto minmax(100rem, auto);
+    grid-template-areas: "head" "list" "recipe";
+    max-width: 100%;
+  }
+}
+
+.loader {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border: 0.3rem solid #000;
+  top: 30%;
+  left: 50%;
+  animation: loader 2s infinite ease;
+
+  &-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: $col-blue-light-2;
+    animation: loader-inner 2s infinite ease-in;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}

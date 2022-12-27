@@ -1,0 +1,20 @@
+{
+  "name": "health-life-project",
+  "version": "1.0.0",
+  "description": "health app recipe",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Petar",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "node-sass": "^7.0.3",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "fracty": "^1.0.11"
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+
+    <script type="module" defer src="src/js/controller.js"></script>
+
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Life</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="./logo.png" alt="logo" />
+
+        <form class="search">
+          <input
+            class="search__field"
+            type="text"
+            placeholder="Search for recipe..."
+          />
+          <button class="search__btn">
+            <ion-icon class="search-icon" name="search-outline"></ion-icon>
+            Search
+          </button>
+        </form>
+        <div class="bookmarks bookmarks-1">
+          <button class="bookmarks__btn">
+            <ion-icon
+              class="bookmarks__icon"
+              name="bookmarks-outline"
+            ></ion-icon>
+            bookmarks
+          </button>
+
+          <div class="bookmarks__box">
+            <ul class="bookmarks__list">
+              <div class="message">
+                <p>No bookmarks yet .</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <div class="search-results">
+        <ul class="results">
+          <!-- <li class="preview">
+            <a href="#5ed6604591c37cdc054bcd45" class="preview__link">
+              <figure class="preview__fig">
+                <img class="preview__image" src="./pizza.jpg" alt="food" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pizza potato</h4>
+                <p class="preview__publisher">John Honh</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="preview">
+            <a
+              href="#5ed6604591c37cdc054bcc13"
+              class="preview__link preview__link--active"
+            >
+              <figure class="preview__fig">
+                <img class="preview__image" src="./pizza.jpg" alt="food" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pizza potato</h4>
+                <p class="preview__publisher">John Honh</p>
+              </div>
+            </a>
+          </li> -->
+        </ul>
+
+        <div class="pagination">
+          <!-- <button class="pagination__btn pagination__btn--prev">
+            <span>Page 1</span>
+          </button>
+          <button class="pagination__btn pagination__btn--next">
+            <span>Page 3</span>
+          </button>-->
+        </div>
+      </div>
+      <div class="recipe">
+        <div class="message">
+          <p>Start by searching for a recipe or an ingredient !</p>
+        </div>
+
+        <!-- <div class="error">
+          <p>No recipes found for your query. Please try again!</p>
+        </div> -->
+
+        <!-- <div class="loader">
+          <span class="loader-inner"></span>
+        </div> -->
+
+        <!-- <figure class="recipe__fig">
+          <img src="./pizza.jpg" alt="pizza" class="recipe__img" />
+          <h1 class="recipe__title">
+            <span>Pitzza</span>
+          </h1>
+        </figure> -->
+
+        <!-- recipe details box-->
+        <!-- <div class="recipe__details">
+          <div class="recipe__info">
+            <ion-icon class="recipe__info-icons" name="time-outline"></ion-icon>
+            <span class="recipe__info-data recipe_info-data-minutes">45</span>
+            <span class="recipe__info-text">minutes</span>
+          </div>
+          <div class="recipe__info">
+            <ion-icon
+              class="recipe__info-icons"
+              name="people-outline"
+            ></ion-icon>
+            <span class="recipe__info-data recipe_info-data-people">45</span>
+            <span class="recipe__info-text">servings</span>
+
+            <div class="recipe__info-buttons">
+              <button class="btn-tiny bt-update-servings">
+                <ion-icon
+                  class="icon-servings"
+                  name="add-circle-outline"
+                ></ion-icon>
+              </button>
+              <button class="btn-tiny btn-update-servings">
+                <ion-icon
+                  class="icon-servings"
+                  name="remove-circle-outline"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="recipe__bookmarks">
+            <button class="btn__add-bookmark">
+              <ion-icon class="bookmark-icon" name="bookmark"></ion-icon>
+            </button>
+          </div>
+        </div> -->
+
+        <!--   recipe ingridient box-->
+
+        <!-- <div class="recipe__ingridents">
+          <h2>Recipe ingridents</h2>
+          <ul class="recipe__ingridents-list">
+            <li class="recipe__ingridient">
+              <ion-icon
+                class="recipe__ingridient-icon"
+                name="checkmark-outline"
+              ></ion-icon>
+              <div class="recipe__ingridient-quantity">2</div>
+              <div class="recipe__ingridient-description">
+                brasnsdasdasdasdaso
+              </div>
+            </li>
+            <li class="recipe__ingridient">
+              <ion-icon
+                class="recipe__ingridient-icon"
+                name="checkmark-outline"
+              ></ion-icon>
+              <div class="recipe__ingridient-quantity">2</div>
+              <div class="recipe__ingridient-description">brasdasdsadsno</div>
+            </li>
+            <li class="recipe__ingridient">
+              <ion-icon
+                class="recipe__ingridient-icon"
+                name="checkmark-outline"
+              ></ion-icon>
+              <div class="recipe__ingridient-quantity">2</div>
+              <div class="recipe__ingridient-description">brasdasdsadsno</div>
+            </li>
+          </ul>
+        </div> -->
+
+        <!--   recipe direction box-->
+        <!-- <div class="recipe__direction">
+          <h2>How it cook it</h2>
+          <p>
+            This recipe was carefully designed and tested by
+            <span class="recipe__publisher">All recipe</span>. <br />Please
+            check out directions at their website.
+          </p>
+          <a href="#" class="recipe__direction-link"
+            ><span>Direction</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon
+          ></a>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script> -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
