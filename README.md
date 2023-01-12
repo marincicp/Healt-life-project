@@ -1,6 +1,6 @@
 # Healt-life-project
 
--Web applicatin for searching certain recipe
+-Web application for searching for certain recipe
 
 
 
